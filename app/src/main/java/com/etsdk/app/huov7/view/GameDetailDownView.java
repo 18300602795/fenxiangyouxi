@@ -257,8 +257,8 @@ public class GameDetailDownView extends FrameLayout implements ApklDownloadListe
             case R.id.tv_share:
                 L.i("333", "开始分享");
                 if (resultBean == null) {
-                    getShareData(true);
-//                    getUserInfoData(true);
+//                    getShareData(true);
+                    getUserInfoData(true);
 //                    T.s(getContext(), "分享失败，请稍后再试");
                 } else {
 //                    showShare();

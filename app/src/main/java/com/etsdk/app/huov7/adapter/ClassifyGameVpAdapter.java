@@ -24,7 +24,7 @@ public class ClassifyGameVpAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        return GameListFragment.newInstance(false,false,0,0,0,0,0,gameClassifyList.get(position).getTypeid());
+        return GameListFragment.newInstance(false,false,0,0,0,0,0,0,gameClassifyList.get(position).getTypeid());
     }
 
     @Override

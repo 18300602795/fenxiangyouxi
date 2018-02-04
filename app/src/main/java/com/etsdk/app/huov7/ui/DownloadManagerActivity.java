@@ -174,7 +174,7 @@ public class DownloadManagerActivity extends ImmerseActivity {
                 finish();
                 break;
             case R.id.tv_more:
-                GameListActivity.start(mContext, "实时热门下载",2,0,0,0,0,0,null);
+                GameListActivity.start(mContext,"实时热门下载", false, false ,2,0,0,0,0,0,0,null);
                 break;
             case R.id.tv_all_pause:
                 FileDownloader.getImpl().pauseAll();

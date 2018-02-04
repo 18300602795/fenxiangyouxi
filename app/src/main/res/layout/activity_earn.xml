@@ -61,7 +61,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="连续签到7天得海量积分"
+                        android:text="连续签到获得大量积分，大量好礼等你来拿"
+                        android:singleLine="true"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -110,7 +111,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="关注微信公众号，可获得3积分"
+                        android:text="关注微信公众号，大量好礼及福利等你来拿"
+                        android:singleLine="true"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -159,7 +161,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="邀请好友，获好友充值10%的积分"
+                        android:text="邀请好友，大量好礼及福利等你来拿"
+                        android:singleLine="true"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -209,6 +212,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="参与活动，完成指定任务即可获得积分"
+                        android:singleLine="true"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -258,6 +262,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="大量精品游戏，试玩就有积分"
+                        android:singleLine="true"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -307,6 +312,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="在纷享游戏中打开游戏，每日获取1-5积分"
+                        android:singleLine="true"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>

@@ -21,7 +21,7 @@ public class SdkConstant {
     public static String HS_CLIENTID="";//
     public static String HS_CLIENTKEY="";
     public static String HS_APPKEY="";
-    public static String HS_AGENT="";
+    public static String HS_AGENT="app_100_1013";
     public static String FROM="3";//1-WEB、2-WAP、3-Android、4-IOS、5-WP
 
     //地址信息

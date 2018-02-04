@@ -17,6 +17,15 @@ public class UserInfoResultBean {
     private String agent_id;	//String 渠道
     private float ptbcnt;	// 平台币数量
     private String name;    //String 渠道名字
+    private String give_integral; // 今日积分
+
+    public String getGive_integral() {
+        return give_integral;
+    }
+
+    public void setGive_integral(String give_integral) {
+        this.give_integral = give_integral;
+    }
 
     public String getName() {
         return name;

@@ -1,6 +1,7 @@
 package com.etsdk.app.huov7.base;
 
 import android.content.Context;
+import android.support.multidex.MultiDex;
 import android.telephony.TelephonyManager;
 
 import com.etsdk.app.huov7.BuildConfig;
@@ -53,5 +54,10 @@ public class AileApplication extends BaseApplication {
         String imei = telephonyManager.getDeviceId();
 
         return imei;
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base); MultiDex.install(this);
     }
 }

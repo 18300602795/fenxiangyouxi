@@ -51,6 +51,7 @@ public class GameListFragment extends AutoLazyFragment implements AdvRefreshList
     private int server;//	否	INT	是否新游 2 开服游戏 1 普通 0 所有 20170113新增
     private int test;//	否	INT	是否新游 2 开测游戏 1 普通 0 所有 20170113新增
     private int hot;
+    private int category;   //INT	是否单机 2 网游 1 单机 0 所有 20170113新增
     private String type;//分类id
 
     /**
@@ -59,7 +60,7 @@ public class GameListFragment extends AutoLazyFragment implements AdvRefreshList
      * @param showRank
      * @return
      */
-    public static GameListFragment newInstance(boolean requestTopSplit, boolean showRank,int hot,int isnew,int remd,int server,int test,String typeId) {
+    public static GameListFragment newInstance(boolean requestTopSplit, boolean showRank,int hot,int isnew,int remd,int server,int test,int category,String typeId) {
         GameListFragment newFragment = new GameListFragment();
         Bundle bundle = new Bundle();
         bundle.putBoolean("requestTopSplit", requestTopSplit);
@@ -69,6 +70,7 @@ public class GameListFragment extends AutoLazyFragment implements AdvRefreshList
         bundle.putInt("remd", remd);
         bundle.putInt("server", server);
         bundle.putInt("test", test);
+        bundle.putInt("category", category);
         bundle.putString("typeId", typeId);
         newFragment.setArguments(bundle);
         return newFragment;
@@ -92,6 +94,7 @@ public class GameListFragment extends AutoLazyFragment implements AdvRefreshList
             remd=arguments.getInt("remd");
             server=arguments.getInt("server");
             test=arguments.getInt("test");
+            category=arguments.getInt("category");
             type =arguments.getString("typeId",null);
         }
         baseRefreshLayout = new MVCSwipeRefreshHelper(swrefresh);
@@ -132,6 +135,7 @@ public class GameListFragment extends AutoLazyFragment implements AdvRefreshList
         httpParams.put("remd",remd);
         httpParams.put("server",server);
         httpParams.put("test",test);
+        httpParams.put("category",category);
         if(type!=null){
             httpParams.put("type",type);
         }

@@ -49,9 +49,9 @@ public class MainGameFragment extends AutoLazyFragment {
     ImageView ivGotoMsg;
     private VpAdapter vpAdapter;
     private List<Fragment> fragmentList = new ArrayList<>();
-    private String[] titleList = {"分类", "BT榜", "新游榜", "开服"};
-    private int[] mIconUnselectIds = {R.mipmap.fenlei_u, R.mipmap.remenbang_u, R.mipmap.xinyoubang_u, R.mipmap.kaice_u};
-    private int[] mIconSelectIds = {R.mipmap.fenlei_s, R.mipmap.remenbang_s, R.mipmap.xinyoubang_s, R.mipmap.kaice_s};
+    private String[] titleList = {"分类", "BT", "折扣", "GM", "精品"};
+    private int[] mIconUnselectIds = {R.mipmap.fenlei_u, R.mipmap.kaice_u,R.mipmap.xinyoubang_u, R.mipmap.gm_icon, R.mipmap.remenbang_u};
+    private int[] mIconSelectIds = {R.mipmap.fenlei_s, R.mipmap.kaice_s, R.mipmap.xinyoubang_s,R.mipmap.gm_icon_s, R.mipmap.remenbang_s};
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
     private int position = 0;
     private int secondPosition = 0;
@@ -63,13 +63,13 @@ public class MainGameFragment extends AutoLazyFragment {
         super.onCreateViewLazy(savedInstanceState);
         setContentView(R.layout.fragment_main_game);
         EventBus.getDefault().register(this);
-        if(BuildConfig.projectCode == 137){
-            titleList[1] = "BT榜";
-            titleList[3] = "开服";
-        }else{
-            titleList[1] = "热门榜";
-            titleList[3] = "开服开测";
-        }
+//        if(BuildConfig.projectCode == 137){
+//            titleList[1] = "BT榜";
+//            titleList[3] = "开服";
+//        }else{
+//            titleList[1] = "热门榜";
+//            titleList[3] = "开服开测";
+//        }
         setupUI();
     }
 
@@ -82,15 +82,17 @@ public class MainGameFragment extends AutoLazyFragment {
         }else{
             fragmentList.add(new GameFirstClassifyFragmentV1());
         }
-        fragmentList.add(GameListFragment.newInstance(true, true, 2, 0, 0, 0, 0, null));
-        fragmentList.add(GameListFragment.newInstance(true, true, 0, 2, 0, 0, 0, null));
+        fragmentList.add(GameListFragment.newInstance(true, true, 0, 0, 0, 0, 0,3, null));
+        fragmentList.add(GameListFragment.newInstance(true, true, 0, 0, 0, 0, 0,4, null));
+        fragmentList.add(GameListFragment.newInstance(true, true, 0, 0, 0, 0, 0,1, null));
+        fragmentList.add(GameListFragment.newInstance(true, true, 0, 0, 0, 0, 0,5,null));
 //        gameTestNewFragment = new GameTestNewFragment();
 //        Bundle bundle = new Bundle();
 //        bundle.putInt("position", secondPosition);
 //        vpMainNews.setCanScroll(true);
 //        gameTestNewFragment.setArguments(bundle);
 //        fragmentList.add(gameTestNewFragment);
-        fragmentList.add(new GameTestNewFragmentNew());
+//        fragmentList.add(new GameTestNewFragmentNew());
         vpAdapter = new VpAdapter(getChildFragmentManager(), fragmentList, titleList);
         vpMainGame.setOffscreenPageLimit(3);
         vpMainGame.setAdapter(vpAdapter);

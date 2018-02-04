@@ -20,6 +20,8 @@ import com.etsdk.app.huov7.ui.CouponDetailActivity;
 import com.etsdk.app.huov7.ui.EarnActivity;
 import com.etsdk.app.huov7.ui.FuliGiftActivity;
 import com.etsdk.app.huov7.ui.GameDetailV2Activity;
+import com.etsdk.app.huov7.ui.GameListActivity;
+import com.etsdk.app.huov7.ui.GameTestNewActivity;
 import com.etsdk.app.huov7.ui.GiftDetailActivity;
 import com.etsdk.app.huov7.ui.MainActivity;
 import com.etsdk.app.huov7.ui.WebViewActivity;
@@ -72,13 +74,15 @@ public class TjAdTopViewProvider
             holder.llNewGame.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ((MainActivity) context).switchGameFragment(0);
+//                    ((MainActivity) context).switchGameFragment(0);
+                    GameListActivity.start(context, "GM榜单", true, true, 0, 0, 0, 0, 0, 0, 1, null);
                 }
             });
             holder.llStartGame.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ((MainActivity) context).switchGameTestFragment();
+//                    ((MainActivity) context).switchGameTestFragment();
+                    GameTestNewActivity.start(context);
                 }
             });
             holder.llGift.setOnClickListener(new View.OnClickListener() {

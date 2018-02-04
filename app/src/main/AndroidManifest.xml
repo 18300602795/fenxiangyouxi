@@ -292,6 +292,12 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
+        <!--开服表 !-->
+        <activity
+            android:name="com.etsdk.app.huov7.ui.GameTestNewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="com.etsdk.app.huov7.ui.ForgetPwdActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"

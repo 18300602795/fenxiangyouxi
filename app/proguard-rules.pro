@@ -18,7 +18,7 @@
 #####下面是自己的一些特殊的配置####################################################
 
 #####这里是自己的内部项目的配置，如javaBean   #######
-
+ -keepattributes EnclosingMethod
 -keep class com.etsdk.app.huov7.model.view.** {*;} #保护自定义view
 -keep class com.etsdk.app.huov7.model.**{*;} #保护javaBean
 -keep class com.etsdk.app.huov7.shop.model.**{*;} #保护javaBean

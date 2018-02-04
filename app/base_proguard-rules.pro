@@ -15,6 +15,7 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
 -dontwarn
 -dontoptimize
 -ignorewarnings						# 忽略警告，避免打包时某些警告出现
@@ -29,6 +30,7 @@
 # 保留行号
 -keepattributes SourceFile,LineNumberTable
 -keepattributes Signature   #保护泛型-否则会出现泛型找不到,socket无法使用
+-keepattributes EnclosingMethod
 #####################记录生成的日志数据,gradle build时在本项目根目录输出################
 #apk 包内所有 class 的内部结构
 #-dump class_files.txt

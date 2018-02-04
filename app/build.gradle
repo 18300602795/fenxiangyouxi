@@ -7,7 +7,10 @@ android {
         versionCode 7
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        signingConfig signingConfigs.debug
     }
+
     lintOptions{
         checkReleaseBuilds false
         abortOnError false
@@ -68,14 +71,15 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     compile project(':jcvideoplayer-lib')
     compile files('share_libs/MobCommons-2017.1201.1507.jar')
+    dependencies { compile 'com.android.support:multidex:1.0.1' }
 }
 //apply plugin: 'AndResGuard'
 apply plugin: 'com.antfortune.freeline'
 
 /*
 buildscript {
-    repositories {
-        jcenter()
+    repositories) {
+        jcenter(
     }
     dependencies {
         classpath 'com.tencent.mm:AndResGuard-gradle-plugin:1.1.15'

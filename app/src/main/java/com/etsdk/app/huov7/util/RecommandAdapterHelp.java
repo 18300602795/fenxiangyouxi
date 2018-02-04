@@ -45,7 +45,7 @@ public class RecommandAdapterHelp {
         recommandBaseViewHolder.tvMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GameListActivity.start(v.getContext(), recommandBaseViewHolder.tvTypeName.getText().toString(),2,0,0,0,0,0,null);
+                GameListActivity.start(v.getContext(), recommandBaseViewHolder.tvTypeName.getText().toString(),true, true, 2,0,0,0,0,0,0,null);
             }
         });
         recommandBaseViewHolder.ivBroadcast.setOnClickListener(new View.OnClickListener() {

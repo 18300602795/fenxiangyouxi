@@ -124,7 +124,7 @@ public class MainMineFragmentNew2 extends AutoLazyFragment {
             email = userInfoResultBean.getEmail();
             tvNickName.setText(userInfoResultBean.getNickname());
             tv_yue.setText(userInfoResultBean.getPtbcnt() + "");
-//            today_income.setText(userInfoResultBean.getMyintegral());
+            today_income.setText(userInfoResultBean.getGive_integral());
             all_income.setText(userInfoResultBean.getMyintegral() + "");
             GlideDisplay.display(ivMineHead, userInfoResultBean.getPortrait(), errorImage);
 //            Glide.with(getActivity()).load(userInfoResultBean.getPortrait()).placeholder(errorImage).into(ivMineHead);
